@@ -1,4 +1,8 @@
 @import url(./normalize.css);
+body {
+  color: white;
+  height: 7000px; }
+
 .container {
   width: 1100px;
   margin: auto; }
@@ -11,7 +15,6 @@ h1, h2 {
 
 header {
   background: url("../assets/header-bg.jpg") no-repeat center center fixed;
-  color: white;
   position: relative;
   padding-bottom: 10rem; }
   header .overlay {
@@ -61,3 +64,66 @@ header {
         color: inherit; }
     header .hero p {
       font-size: 1.5rem; }
+
+#features {
+  background: black; }
+  #features .feature {
+    display: flex;
+    padding: 4rem 0;
+    align-items: center; }
+    #features .feature.reversed {
+      flex-direction: row-reverse; }
+    #features .feature #tv {
+      position: relative; }
+      #features .feature #tv img {
+        position: relative;
+        z-index: 2; }
+      #features .feature #tv video {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -55%); }
+    #features .feature #mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      #features .feature #mobile img {
+        width: 65%; }
+      #features .feature #mobile .download-box {
+        display: flex;
+        align-items: center;
+        min-height: 70px;
+        border: 2px solid gray;
+        border-radius: .5rem;
+        background: black;
+        padding: 1rem;
+        width: 50%;
+        margin-top: -8rem; }
+        #features .feature #mobile .download-box img {
+          height: auto; }
+          #features .feature #mobile .download-box img:first-of-type {
+            width: 50px;
+            margin-right: 1rem; }
+          #features .feature #mobile .download-box img:last-of-type {
+            width: 50px;
+            display: block;
+            margin-left: auto; }
+        #features .feature #mobile .download-box p {
+          margin: 0; }
+          #features .feature #mobile .download-box p:first-of-type {
+            font-weight: bold;
+            font-size: 1.2rem; }
+          #features .feature #mobile .download-box p:last-of-type {
+            color: #0071eb; }
+    #features .feature #devices {
+      position: relative; }
+      #features .feature #devices img {
+        position: relative;
+        z-index: 2; }
+      #features .feature #devices video {
+        position: absolute;
+        z-index: 1;
+        left: 120px;
+        width: 62%;
+        top: 50px; }

@@ -1,0 +1,62 @@
+#features
+    background: black
+    .feature
+        display: flex
+        padding: 4rem 0
+        align-items: center
+        &.reversed
+            flex-direction: row-reverse
+        #tv
+            position: relative
+            img
+                position: relative
+                z-index: 2
+            video
+                position: absolute
+                z-index: 1
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -55%)
+        #mobile
+            display: flex
+            flex-direction: column
+            align-items: center
+            img
+                width: 65%
+            .download-box
+                display: flex
+                align-items: center
+                min-height: 70px
+                border: 2px solid gray
+                border-radius: .5rem
+                background: black
+                padding: 1rem
+                width: 50%
+                margin-top: -8rem
+                img
+                    height: auto
+                    &:first-of-type
+                        width: 50px
+                        margin-right: 1rem
+                    &:last-of-type
+                        width: 50px
+                        display: block
+                        margin-left: auto
+                p
+                    margin: 0
+                    &:first-of-type
+                        font-weight: bold
+                        font-size: 1.2rem
+                    &:last-of-type
+                        color: #0071eb
+        #devices
+            position: relative
+            img
+                position: relative
+                z-index: 2
+            video
+                position: absolute
+                z-index: 1
+                left: 120px
+                width: 62%
+                top: 50px

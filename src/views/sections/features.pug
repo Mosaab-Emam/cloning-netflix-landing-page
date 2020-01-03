@@ -1,0 +1,50 @@
+include ../partials/feature
+
+//- -
+//-     var features = [
+//-         {
+//-             title: "Enjoy your TV",
+//-             desc: "Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.",
+//-             device: "tv"
+//-         },
+//-         {
+//-             title: "Download your shows to watch on the go",
+//-             desc: "Save your data and watch all your favorites offline."
+//-         },
+//-         {
+//-             title: "Watch everywhere",
+//-             desc: "Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more."
+//-         }
+//-     ]
+
+section#features
+    .container
+        .feature
+            .info
+                h2 Enjoy on your TV.
+                p Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+            #tv
+                img(src="./assets/tv.png", alt="TV")
+                video(autoplay="", loop="")
+                    source(src="./assets/video-tv.m4v")
+        .feature.reversed
+            .info
+                h2 Download your shows to watch on the go.
+                p Save your data and watch all your favorites offline.
+            #mobile
+                img(src="./assets/mobile.png")
+                .download-box
+                    img(src="./assets/boxshot.png", alt="box shot")
+                    .text
+                        p Stranger things
+                        p Downloading...
+                    img(src="./assets/download-icon.gif")
+        .feature
+            .info
+                h2 Watch everywhere.
+                p Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.
+            #devices
+                img(src="./assets/devices.png")
+                video(autoplay="", loop="")
+                    source(src="./assets/video-devices.m4v")
+                

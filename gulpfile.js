@@ -11,7 +11,7 @@ function html() {
 function css() {
   return src("./src/styles/main.sass")
     .pipe(sass())
-    .pipe(dest("./dist"));
+    .pipe(dest("./dist/styles"));
 }
 
 // Watch for changes and fire suitable functions

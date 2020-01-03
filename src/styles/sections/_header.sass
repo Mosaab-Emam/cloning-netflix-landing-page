@@ -1,0 +1,52 @@
+header
+    background: url("../assets/header-bg.jpg") no-repeat center center fixed
+    color: white
+    position: relative
+    padding-bottom: 10rem
+    .overlay
+        position: absolute
+        z-index: 1
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: black
+        opacity: .75
+    .container
+        position: relative
+        z-index: 2
+    nav
+        display: flex
+        padding: 2rem 0
+        .logo
+            width: 10rem
+            fill: $red
+        button
+            margin-left: auto
+            background: $red
+            color: inherit
+            border-radius: .25rem
+            border: none
+            padding: 0 1.5rem
+            height: auto
+    .hero
+        text-align: center
+        margin-top: 10rem
+        h1
+            font-size: 3rem
+        h2
+            font-size: 2rem
+            margin-bottom: 2rem
+        form
+            display: flex
+            justify-content: center
+            input
+                padding: 1.5rem 1rem
+                width: 50%
+            button
+                width: 20%
+                border: none
+                background: $red
+                color: inherit
+        p
+            font-size: 1.5rem

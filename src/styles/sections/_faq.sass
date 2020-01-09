@@ -1,0 +1,49 @@
+#faq
+  background: black
+  padding: 4rem 0
+  p
+    margin: 1rem 0
+  ul
+    width: 50%
+    list-style: none
+    padding: 0
+    margin: 0 auto
+    li
+      background: $darkGray
+      position: relative
+      padding: 1rem 2rem
+      margin-bottom: 1rem
+      &:last-of-type
+        margin-bottom: 2rem
+      input[type=checkbox]
+        position: absolute
+        cursor: pointer
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: 1
+        opacity: 0
+        &:checked
+          &~.text
+            p
+              margin: 0
+              max-height: 0
+              opacity: 0
+              transform: translate(0, 50%)
+      .title
+          color: white
+          margin: 0
+          font-size: 2rem
+      .text
+          position: relative
+          overflow: hidden
+          font-size: 1.5rem
+          transform: translate(0, 0)  
+          z-index: 2
+  button
+    @extend %tryBtn
+    display: block
+    margin: auto
+  
+  

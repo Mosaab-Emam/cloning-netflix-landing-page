@@ -1,4 +1,14 @@
 @import url(./normalize.css);
+header .hero button, #faq button {
+  background: #e50914;
+  border: none;
+  color: inherit;
+  padding: .75rem 1.5rem;
+  font-size: 2rem; }
+
+* {
+  box-sizing: border-box; }
+
 body {
   color: white;
   height: 7000px; }
@@ -51,17 +61,6 @@ header {
     header .hero h2 {
       font-size: 2rem;
       margin-bottom: 2rem; }
-    header .hero form {
-      display: flex;
-      justify-content: center; }
-      header .hero form input {
-        padding: 1.5rem 1rem;
-        width: 50%; }
-      header .hero form button {
-        width: 20%;
-        border: none;
-        background: #e50914;
-        color: inherit; }
     header .hero p {
       font-size: 1.5rem; }
 
@@ -127,3 +126,48 @@ header {
         left: 120px;
         width: 62%;
         top: 50px; }
+
+#faq {
+  background: black;
+  padding: 4rem 0; }
+  #faq p {
+    margin: 1rem 0; }
+  #faq ul {
+    width: 50%;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; }
+    #faq ul li {
+      background: #303030;
+      position: relative;
+      padding: 1rem 2rem;
+      margin-bottom: 1rem; }
+      #faq ul li:last-of-type {
+        margin-bottom: 2rem; }
+      #faq ul li input[type=checkbox] {
+        position: absolute;
+        cursor: pointer;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0; }
+        #faq ul li input[type=checkbox]:checked ~ .text p {
+          margin: 0;
+          max-height: 0;
+          opacity: 0;
+          transform: translate(0, 50%); }
+      #faq ul li .title {
+        color: white;
+        margin: 0;
+        font-size: 2rem; }
+      #faq ul li .text {
+        position: relative;
+        overflow: hidden;
+        font-size: 1.5rem;
+        transform: translate(0, 0);
+        z-index: 2; }
+  #faq button {
+    display: block;
+    margin: auto; }

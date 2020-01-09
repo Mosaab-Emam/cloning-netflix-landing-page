@@ -14,7 +14,7 @@ h1, h2 {
   margin: 0; }
 
 header {
-  background: url("../assets/header-bg.jpg") no-repeat center center fixed;
+  background: url("../assets/header-bg.jpg") no-repeat center center;
   position: relative;
   padding-bottom: 10rem; }
   header .overlay {

@@ -36,13 +36,12 @@
 
 section#faq
     .container
-        ul
-            each faq in faqs
-                li
-                    input(type="checkbox" checked)
-                    p.title= faq.title
-                    .text
-                        p= faq.text.p1
-                        if faq.text.p2
-                            p= faq.text.p2
-        button TRY IT NOW
+        h2 Frequently Asked Questions
+        each faq in faqs
+            .accordion
+                button.accordion-btn= faq.title
+                .accordion-text
+                    p= faq.text.p1
+                    if faq.text.p2
+                        p= faq.text.p2
+        button TRY IT NOW <i class="icon-angle-right"></i>

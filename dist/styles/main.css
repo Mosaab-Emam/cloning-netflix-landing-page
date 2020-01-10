@@ -173,48 +173,62 @@ header {
 
 #faq {
   background: black;
-  padding: 4rem 0; }
-  #faq p {
-    margin: 1rem 0; }
-  #faq ul {
-    width: 50%;
-    list-style: none;
-    padding: 0;
-    margin: 0 auto; }
-    #faq ul li {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #faq h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-align: center; }
+  #faq .accordion {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto; }
+    #faq .accordion:first-of-type .accordion-btn {
+      margin-top: 0; }
+    #faq .accordion .accordion-btn,
+    #faq .accordion .accordion-text {
       background: #303030;
-      position: relative;
-      padding: 1rem 2rem;
-      margin-bottom: 1rem; }
-      #faq ul li:last-of-type {
-        margin-bottom: 2rem; }
-      #faq ul li input[type=checkbox] {
+      font-size: 1.5rem; }
+    #faq .accordion .accordion-btn {
+      background: #303030;
+      color: inherit;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      margin-top: 1rem;
+      padding: 1.5rem;
+      position: relative; }
+      #faq .accordion .accordion-btn:after {
+        content: "\e800";
+        font-family: "fontello";
+        font-size: 2rem;
         position: absolute;
-        cursor: pointer;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        opacity: 0; }
-        #faq ul li input[type=checkbox]:checked ~ .text p {
-          margin: 0;
-          max-height: 0;
-          opacity: 0;
-          transform: translate(0, 50%); }
-      #faq ul li .title {
-        color: white;
+        top: 50%;
+        right: 2rem;
+        transition: all .25s ease-in-out;
+        transform: translateY(-50%) rotate(0deg); }
+      #faq .accordion .accordion-btn.active:after {
+        transform: translateY(-50%) rotate(135deg); }
+    #faq .accordion .accordion-text {
+      border-top: 1px solid black;
+      max-height: 0;
+      padding: 0;
+      overflow: hidden;
+      transition: max-height .25s linear; }
+      #faq .accordion .accordion-text p {
         margin: 0;
-        font-size: 2rem; }
-      #faq ul li .text {
-        position: relative;
-        overflow: hidden;
-        font-size: 1.5rem;
-        transform: translate(0, 0);
-        z-index: 2; }
+        padding: 1.5rem; }
+        #faq .accordion .accordion-text p + p {
+          margin-top: 1rem;
+          padding-top: 0; }
+      #faq .accordion .accordion-text.active {
+        max-height: 20rem; }
   #faq button {
     display: block;
-    margin: auto; }
+    margin: 2rem auto 0; }
 
 footer {
   background: black;

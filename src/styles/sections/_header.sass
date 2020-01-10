@@ -1,5 +1,6 @@
 header
-    background: url("../assets/header-bg.jpg") no-repeat center center
+    background: url("../assets/header-bg.jpg") no-repeat
+    background-size: cover
     position: relative
     padding-bottom: 10rem
     .overlay
@@ -10,7 +11,7 @@ header
         left: 0
         right: 0
         background: black
-        opacity: .75
+        opacity: .5
     .container
         position: relative
         z-index: 2
@@ -18,7 +19,7 @@ header
         display: flex
         padding: 2rem 0
         .logo
-            width: 10rem
+            width: 8rem
             fill: $red
         button
             margin-left: auto
@@ -26,16 +27,19 @@ header
             color: inherit
             border-radius: .25rem
             border: none
-            padding: 0 1.5rem
+            padding: 0 1rem
             height: auto
     .hero
         text-align: center
-        margin-top: 10rem
+        width: 50%
+        margin: 6rem auto 0
         h1
             font-size: 3rem
+            margin-bottom: 1rem
         h2
-            font-size: 2rem
-            margin-bottom: 2rem
+            font-weight: 400
+            font-size: 1.75rem
+            margin-bottom: 3rem
         button
             @extend %tryBtn
         p

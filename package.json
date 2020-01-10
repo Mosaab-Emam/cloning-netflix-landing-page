@@ -2,6 +2,9 @@
   "name": "cloning-netflix-landing-page",
   "version": "1.0.0",
   "description": "Cloning the netflix landing page (and improving it)",
+  "scripts": {
+    "deploy": "sh deploy-gh-pages.sh"
+  },
   "author": "Mosaab Emam",
   "license": "ISC",
   "dependencies": {

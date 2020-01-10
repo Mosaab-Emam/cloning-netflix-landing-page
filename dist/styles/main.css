@@ -16,15 +16,17 @@ html {
 body {
   color: white; }
 
-.container {
-  width: 1140px;
-  margin: auto; }
+h1, h2 {
+  margin: 0; }
+
+hr {
+  margin: 0;
+  height: .5rem;
+  border: none;
+  background: #303030; }
 
 button {
   cursor: pointer; }
-
-h1, h2 {
-  margin: 0; }
 
 a {
   color: white;
@@ -35,6 +37,10 @@ a {
 .icon-angle-right:before,
 .icon-plus:before {
   margin: 0; }
+
+.container {
+  width: 1140px;
+  margin: auto; }
 
 header {
   background: url("../assets/header-bg.jpg") no-repeat;
@@ -83,29 +89,49 @@ header {
 
 #features {
   background: black; }
+  #features .container:first-of-type .feature {
+    padding-top: 0;
+    padding-bottom: 4rem; }
+  #features .container:last-of-type .feature {
+    padding-bottom: 3rem; }
   #features .feature {
     display: flex;
-    padding: 4rem 0;
-    align-items: center; }
+    align-items: center;
+    padding: 4rem 0; }
     #features .feature.reversed {
       flex-direction: row-reverse; }
+    #features .feature .info {
+      width: 50%; }
+      #features .feature .info h2 {
+        font-size: 3rem; }
+      #features .feature .info p {
+        font-size: 1.5rem; }
+      #features .feature .info button {
+        background: transparent;
+        color: inherit;
+        border: 1px solid #fff;
+        padding: 1rem 1.25rem;
+        font-size: 1.25rem; }
     #features .feature #tv {
       position: relative; }
       #features .feature #tv img {
         position: relative;
-        z-index: 2; }
+        z-index: 2;
+        width: 100%; }
       #features .feature #tv video {
         position: absolute;
         z-index: 1;
+        width: 100%;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -55%); }
     #features .feature #mobile {
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      transform: translateY(-2rem); }
       #features .feature #mobile img {
-        width: 65%; }
+        width: 75%; }
       #features .feature #mobile .download-box {
         display: flex;
         align-items: center;
@@ -136,13 +162,14 @@ header {
       position: relative; }
       #features .feature #devices img {
         position: relative;
-        z-index: 2; }
+        z-index: 2;
+        width: 100%; }
       #features .feature #devices video {
         position: absolute;
         z-index: 1;
-        left: 120px;
+        left: 110px;
         width: 62%;
-        top: 50px; }
+        top: 42px; }
 
 #faq {
   background: black;

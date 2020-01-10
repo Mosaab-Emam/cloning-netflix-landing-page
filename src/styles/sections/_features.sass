@@ -1,19 +1,40 @@
 #features
     background: black
+    .container:first-of-type
+        .feature
+            padding-top: 0
+            padding-bottom: 4rem
+    .container:last-of-type
+        .feature
+            padding-bottom: 3rem
     .feature
         display: flex
-        padding: 4rem 0
         align-items: center
+        padding: 4rem 0
         &.reversed
             flex-direction: row-reverse
+        .info
+            width: 50%
+            h2
+                font-size: 3rem
+            p
+                font-size: 1.5rem
+            button
+                background: transparent
+                color: inherit
+                border: 1px solid #fff
+                padding: 1rem 1.25rem
+                font-size: 1.25rem
         #tv
             position: relative
             img
                 position: relative
                 z-index: 2
+                width: 100%
             video
                 position: absolute
                 z-index: 1
+                width: 100%
                 left: 50%
                 top: 50%
                 transform: translate(-50%, -55%)
@@ -21,8 +42,9 @@
             display: flex
             flex-direction: column
             align-items: center
+            transform: translateY(-2rem)
             img
-                width: 65%
+                width: 75%
             .download-box
                 display: flex
                 align-items: center
@@ -54,9 +76,10 @@
             img
                 position: relative
                 z-index: 2
+                width: 100%
             video
                 position: absolute
                 z-index: 1
-                left: 120px
+                left: 110px
                 width: 62%
-                top: 50px
+                top: 42px

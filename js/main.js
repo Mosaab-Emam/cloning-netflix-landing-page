@@ -1,0 +1,1 @@
+document.querySelectorAll(".accordion-btn").forEach(function(t){t.addEventListener("click",function(){t.classList.toggle("active"),t.nextElementSibling.classList.toggle("active")})});

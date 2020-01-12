@@ -4,45 +4,82 @@
         .feature
             padding-top: 0
             padding-bottom: 4rem
+            @media(max-width: 991px)
+                padding-top: 4rem
     .container:last-of-type
         .feature
             padding-bottom: 3rem
+    @media(max-width: 991px)
+        & .container:nth-of-type(2) .feature
+            padding-bottom: 1rem
     .feature
         display: flex
         align-items: center
         padding: 4rem 0
+        @media(max-width: 991px)
+            flex-direction: column
+            text-align: center
         &.reversed
             flex-direction: row-reverse
+            @media(max-width: 991px)
+                flex-direction: column
         .info
             width: 50%
+            position: relative
+            z-index: 2
             h2
                 font-size: 3rem
             p
                 font-size: 1.5rem
+            @media(max-width: 991px)
+                width: 100%
+                h2
+                    font-size: 2.5rem
+            @media(max-width: 767px)
+                h2
+                    font-size: 2rem
+                p
+                    font-size: 1.2rem
             button
                 background: transparent
                 color: inherit
                 border: 1px solid #fff
                 padding: 1rem 1.25rem
                 font-size: 1.25rem
+                @media(max-width: 991px)
+                    display: none
         #tv
             position: relative
+            text-align: right
+            position: relative
+            z-index: 1
+            @media(max-width: 991px)
+                margin-top: -5rem
+            @media(max-width: 991px)
+                margin-top: -3rem
             img
                 position: relative
                 z-index: 2
-                width: 100%
+                width: 90%
             video
                 position: absolute
                 z-index: 1
-                width: 100%
-                left: 50%
+                width: 67%
                 top: 50%
+                left: 55%
                 transform: translate(-50%, -55%)
         #mobile
             display: flex
             flex-direction: column
             align-items: flex-start
+            position: relative
+            z-index: 1
             transform: translateY(-2rem)
+            @media(max-width: 991px)
+                align-items: center
+                margin-top: -1rem
+            @media(max-width: 991px)
+                margin-top: 1rem
             img
                 width: 75%
             .download-box
@@ -74,6 +111,10 @@
                         color: #0071eb
         #devices
             position: relative
+            @media(max-width: 991px)
+                margin-top: -1rem
+            @media(max-width: 991px)
+                margin-top: 1rem
             img
                 position: relative
                 z-index: 2
@@ -81,6 +122,6 @@
             video
                 position: absolute
                 z-index: 1
-                left: 110px
                 width: 62%
-                top: 42px
+                top: 9%
+                left: 18.5%

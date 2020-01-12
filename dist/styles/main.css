@@ -102,6 +102,9 @@ header {
     header .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem; }
+      @media (max-width: 767px) {
+        header .hero h1 {
+          font-size: 2.5rem; } }
     header .hero h2 {
       font-weight: 400;
       font-size: 1.75rem;
@@ -114,44 +117,90 @@ header {
   #features .container:first-of-type .feature {
     padding-top: 0;
     padding-bottom: 4rem; }
+    @media (max-width: 991px) {
+      #features .container:first-of-type .feature {
+        padding-top: 4rem; } }
   #features .container:last-of-type .feature {
     padding-bottom: 3rem; }
+  @media (max-width: 991px) {
+    #features .container:nth-of-type(2) .feature {
+      padding-bottom: 1rem; } }
   #features .feature {
     display: flex;
     align-items: center;
     padding: 4rem 0; }
+    @media (max-width: 991px) {
+      #features .feature {
+        flex-direction: column;
+        text-align: center; } }
     #features .feature.reversed {
       flex-direction: row-reverse; }
+      @media (max-width: 991px) {
+        #features .feature.reversed {
+          flex-direction: column; } }
     #features .feature .info {
-      width: 50%; }
+      width: 50%;
+      position: relative;
+      z-index: 2; }
       #features .feature .info h2 {
         font-size: 3rem; }
       #features .feature .info p {
         font-size: 1.5rem; }
+      @media (max-width: 991px) {
+        #features .feature .info {
+          width: 100%; }
+          #features .feature .info h2 {
+            font-size: 2.5rem; } }
+      @media (max-width: 767px) {
+        #features .feature .info h2 {
+          font-size: 2rem; }
+        #features .feature .info p {
+          font-size: 1.2rem; } }
       #features .feature .info button {
         background: transparent;
         color: inherit;
         border: 1px solid #fff;
         padding: 1rem 1.25rem;
         font-size: 1.25rem; }
+        @media (max-width: 991px) {
+          #features .feature .info button {
+            display: none; } }
     #features .feature #tv {
-      position: relative; }
+      position: relative;
+      text-align: right;
+      position: relative;
+      z-index: 1; }
+      @media (max-width: 991px) {
+        #features .feature #tv {
+          margin-top: -5rem; } }
+      @media (max-width: 991px) {
+        #features .feature #tv {
+          margin-top: -3rem; } }
       #features .feature #tv img {
         position: relative;
         z-index: 2;
-        width: 100%; }
+        width: 90%; }
       #features .feature #tv video {
         position: absolute;
         z-index: 1;
-        width: 100%;
-        left: 50%;
+        width: 67%;
         top: 50%;
+        left: 55%;
         transform: translate(-50%, -55%); }
     #features .feature #mobile {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      position: relative;
+      z-index: 1;
       transform: translateY(-2rem); }
+      @media (max-width: 991px) {
+        #features .feature #mobile {
+          align-items: center;
+          margin-top: -1rem; } }
+      @media (max-width: 991px) {
+        #features .feature #mobile {
+          margin-top: 1rem; } }
       #features .feature #mobile img {
         width: 75%; }
       #features .feature #mobile .download-box {
@@ -183,6 +232,12 @@ header {
             color: #0071eb; }
     #features .feature #devices {
       position: relative; }
+      @media (max-width: 991px) {
+        #features .feature #devices {
+          margin-top: -1rem; } }
+      @media (max-width: 991px) {
+        #features .feature #devices {
+          margin-top: 1rem; } }
       #features .feature #devices img {
         position: relative;
         z-index: 2;
@@ -190,9 +245,9 @@ header {
       #features .feature #devices video {
         position: absolute;
         z-index: 1;
-        left: 110px;
         width: 62%;
-        top: 42px; }
+        top: 9%;
+        left: 18.5%; }
 
 #faq {
   background: black;

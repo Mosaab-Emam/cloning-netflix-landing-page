@@ -7,11 +7,15 @@ footer
     .links-container
         display: flex
         justify-content: space-between
+        flex-wrap: wrap
         width: 80%
+        @media(max-width: 991px)
+            width: auto
         ul
             list-style: none
             padding: 0
-            margin-bottom: 2rem
+            @media(max-width: 767px)
+                width: 50%
             &:last-of-type
                 margin-right: 0
             li
@@ -27,5 +31,5 @@ footer
         padding: 1rem
         font-size: 1rem
         border-radius: .5rem
-        margin-bottom: 1rem
+        margin: 2rem 0 1rem
         cursor: pointer

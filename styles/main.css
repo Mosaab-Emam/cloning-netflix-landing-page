@@ -261,7 +261,8 @@ header {
     text-align: center; }
     @media (max-width: 767px) {
       #faq h2 {
-        font-size: 2.5rem; } }
+        font-size: 2.5rem;
+        margin-bottom: 2rem; } }
   #faq .accordion {
     width: 75%;
     margin-left: auto;
@@ -327,11 +328,17 @@ footer {
   footer .links-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 80%; }
+    @media (max-width: 991px) {
+      footer .links-container {
+        width: auto; } }
     footer .links-container ul {
       list-style: none;
-      padding: 0;
-      margin-bottom: 2rem; }
+      padding: 0; }
+      @media (max-width: 767px) {
+        footer .links-container ul {
+          width: 50%; } }
       footer .links-container ul:last-of-type {
         margin-right: 0; }
       footer .links-container ul li {
@@ -347,5 +354,5 @@ footer {
     padding: 1rem;
     font-size: 1rem;
     border-radius: .5rem;
-    margin-bottom: 1rem;
+    margin: 2rem 0 1rem;
     cursor: pointer; }

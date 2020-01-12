@@ -6,6 +6,12 @@ header .hero button, #faq button.tryBtn {
   color: inherit;
   padding: .75rem 1.5rem;
   font-size: 2rem; }
+  @media (max-width: 991px) {
+    header .hero button, #faq button.tryBtn {
+      font-size: 1.5rem; } }
+  @media (max-width: 767px) {
+    header .hero button, #faq button.tryBtn {
+      font-size: 1rem; } }
 
 * {
   box-sizing: border-box; }
@@ -39,8 +45,18 @@ a {
   margin: 0; }
 
 .container {
-  width: 1100px;
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin: auto; }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
 
 header {
   background: url("../assets/header-bg.jpg") no-repeat;
@@ -55,7 +71,7 @@ header {
     left: 0;
     right: 0;
     background: black;
-    opacity: .5; }
+    opacity: .6; }
   header .container {
     position: relative;
     z-index: 2; }
@@ -77,6 +93,12 @@ header {
     text-align: center;
     width: 50%;
     margin: 6rem auto 0; }
+    @media (max-width: 991px) {
+      header .hero {
+        width: 75%; } }
+    @media (max-width: 767px) {
+      header .hero {
+        width: auto; } }
     header .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem; }

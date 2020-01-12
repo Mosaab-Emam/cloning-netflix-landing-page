@@ -11,7 +11,7 @@ header
         left: 0
         right: 0
         background: black
-        opacity: .5
+        opacity: .6
     .container
         position: relative
         z-index: 2
@@ -33,6 +33,10 @@ header
         text-align: center
         width: 50%
         margin: 6rem auto 0
+        @media(max-width: 991px)
+            width: 75%
+        @media(max-width: 767px)
+            width: auto
         h1
             font-size: 3rem
             margin-bottom: 1rem

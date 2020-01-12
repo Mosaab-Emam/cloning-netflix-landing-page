@@ -259,6 +259,9 @@ header {
     font-size: 3rem;
     margin-bottom: 4rem;
     text-align: center; }
+    @media (max-width: 767px) {
+      #faq h2 {
+        font-size: 2.5rem; } }
   #faq .accordion {
     width: 75%;
     margin-left: auto;
@@ -269,6 +272,10 @@ header {
     #faq .accordion .accordion-text {
       background: #303030;
       font-size: 1.5rem; }
+      @media (max-width: 767px) {
+        #faq .accordion .accordion-btn,
+        #faq .accordion .accordion-text {
+          font-size: 1.2rem; } }
     #faq .accordion .accordion-btn {
       background: #303030;
       color: inherit;
@@ -296,6 +303,9 @@ header {
       padding: 0;
       overflow: hidden;
       transition: max-height .25s linear; }
+      @media (max-width: 767px) {
+        #faq .accordion .accordion-text {
+          transition: max-height .5s linear; } }
       #faq .accordion .accordion-text p {
         margin: 0;
         padding: 1.5rem; }
@@ -303,7 +313,7 @@ header {
           margin-top: 1rem;
           padding-top: 0; }
       #faq .accordion .accordion-text.active {
-        max-height: 20rem; }
+        max-height: 99rem; }
   #faq button.tryBtn {
     display: block;
     margin: 2rem auto 0; }

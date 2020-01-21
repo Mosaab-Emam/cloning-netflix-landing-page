@@ -33,8 +33,10 @@ header
         text-align: center
         width: 50%
         margin: 6rem auto 0
+        @media(max-width: 1199px)
+            width: 65%
         @media(max-width: 991px)
-            width: 75%
+            width: 80%
         @media(max-width: 767px)
             width: auto
         h1
@@ -46,7 +48,27 @@ header
             font-weight: 400
             font-size: 1.75rem
             margin-bottom: 3rem
-        button
-            @extend %tryBtn
+        form
+            display: flex
+            justify-content: center
+            @media(max-width: 767px)
+                width: 80%
+                margin: auto
+                flex-direction: column
+            input
+                padding: 1.5rem 1rem
+                width: 67%
+                @media(max-width: 767px)
+                    width: auto
+                    padding: 1rem
+            button
+                @extend %tryBtn
+                width: 33%
+                font-size: 1.25rem
+                @media(max-width: 767px)
+                    width: fit-content
+                    margin: 1rem auto 0
+        // button
+        //     @extend %tryBtn
         p
             font-size: 1.5rem

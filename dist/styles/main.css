@@ -1,16 +1,16 @@
 @import url(./normalize.css);
 @import url(./fontello.css);
-header .hero button, #faq button.tryBtn {
+header .hero form button, #faq button.tryBtn {
   background: #e50914;
   border: none;
   color: inherit;
   padding: .75rem 1.5rem;
   font-size: 2rem; }
   @media (max-width: 991px) {
-    header .hero button, #faq button.tryBtn {
+    header .hero form button, #faq button.tryBtn {
       font-size: 1.5rem; } }
   @media (max-width: 767px) {
-    header .hero button, #faq button.tryBtn {
+    header .hero form button, #faq button.tryBtn {
       font-size: 1rem; } }
 
 * {
@@ -93,9 +93,12 @@ header {
     text-align: center;
     width: 50%;
     margin: 6rem auto 0; }
+    @media (max-width: 1199px) {
+      header .hero {
+        width: 65%; } }
     @media (max-width: 991px) {
       header .hero {
-        width: 75%; } }
+        width: 80%; } }
     @media (max-width: 767px) {
       header .hero {
         width: auto; } }
@@ -109,6 +112,28 @@ header {
       font-weight: 400;
       font-size: 1.75rem;
       margin-bottom: 3rem; }
+    header .hero form {
+      display: flex;
+      justify-content: center; }
+      @media (max-width: 767px) {
+        header .hero form {
+          width: 80%;
+          margin: auto;
+          flex-direction: column; } }
+      header .hero form input {
+        padding: 1.5rem 1rem;
+        width: 67%; }
+        @media (max-width: 767px) {
+          header .hero form input {
+            width: auto;
+            padding: 1rem; } }
+      header .hero form button {
+        width: 33%;
+        font-size: 1.25rem; }
+        @media (max-width: 767px) {
+          header .hero form button {
+            width: fit-content;
+            margin: 1rem auto 0; } }
     header .hero p {
       font-size: 1.5rem; }
 
@@ -267,6 +292,9 @@ header {
     width: 75%;
     margin-left: auto;
     margin-right: auto; }
+    @media (max-width: 767px) {
+      #faq .accordion {
+        width: auto; } }
     #faq .accordion:first-of-type .accordion-btn {
       margin-top: 0; }
     #faq .accordion .accordion-btn,
@@ -303,10 +331,7 @@ header {
       max-height: 0;
       padding: 0;
       overflow: hidden;
-      transition: max-height .25s linear; }
-      @media (max-width: 767px) {
-        #faq .accordion .accordion-text {
-          transition: max-height .5s linear; } }
+      transition: max-height .5s ease-in-out; }
       #faq .accordion .accordion-text p {
         margin: 0;
         padding: 1.5rem; }
@@ -314,7 +339,7 @@ header {
           margin-top: 1rem;
           padding-top: 0; }
       #faq .accordion .accordion-text.active {
-        max-height: 99rem; }
+        max-height: 50rem; }
   #faq button.tryBtn {
     display: block;
     margin: 2rem auto 0; }

@@ -15,6 +15,8 @@
     width: 75%
     margin-left: auto
     margin-right: auto
+    @media(max-width: 767px)
+      width: auto
     &:first-of-type .accordion-btn
       margin-top: 0
     .accordion-btn,
@@ -49,9 +51,7 @@
       max-height: 0
       padding: 0
       overflow: hidden
-      transition: max-height .25s linear
-      @media(max-width: 767px)
-        transition: max-height .5s linear
+      transition: max-height .5s ease-in-out
       p
         margin: 0
         padding: 1.5rem
@@ -59,7 +59,7 @@
           margin-top: 1rem
           padding-top: 0
       &.active
-        max-height: 99rem
+        max-height: 50rem
   button.tryBtn
     @extend %tryBtn
     display: block

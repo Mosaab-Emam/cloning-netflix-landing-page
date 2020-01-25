@@ -37,9 +37,12 @@
 section#faq
     .container
         h2 Frequently Asked Questions
-        each faq in faqs
+        each faq, index in faqs
             .accordion
-                button.accordion-btn= faq.title
+                button.accordion-btn(onclick=`toggleAccordion(${index})`)
+                    span= faq.title
+                    i.icon-plus
+
                 .accordion-text
                     p= faq.text.p1
                     if faq.text.p2

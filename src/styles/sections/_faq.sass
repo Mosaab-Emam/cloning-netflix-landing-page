@@ -8,6 +8,8 @@
     font-size: 3rem
     margin-bottom: 4rem
     text-align: center
+    opacity: 0
+    transform: translateY(2rem)
     @media(max-width: 767px)
       font-size: 2.5rem
       margin-bottom: 2rem
@@ -15,6 +17,8 @@
     width: 75%
     margin-left: auto
     margin-right: auto
+    opacity: 0
+    transform: translateY(2rem)
     @media(max-width: 767px)
       width: auto
     &:first-of-type .accordion-btn
@@ -26,41 +30,32 @@
       @media(max-width: 767px)
         font-size: 1.2rem
     .accordion-btn
+      display: flex
+      justify-content: space-between
       background: $darkGray
       color: inherit
       width: 100%
-      text-align: left
       border: none
       outline: none
       margin-top: 1rem
       padding: 1.5rem
-      position: relative
-      &:after
-        content: "\e800"
-        font-family: "fontello"
-        font-size: 2rem
-        position: absolute
-        top: 50%
-        right: 2rem
-        transition: all .25s ease-in-out
-        transform: translateY(-50%) rotate(0deg)
-      &.active:after
-        transform: translateY(-50%) rotate(135deg)
+      i
+        transform: scale(1.5)
+      
     .accordion-text
       border-top: 1px solid black
       max-height: 0
       padding: 0
       overflow: hidden
-      transition: max-height .5s ease-in-out
       p
         margin: 0
         padding: 1.5rem
         &+p
           margin-top: 1rem
           padding-top: 0
-      &.active
-        max-height: 50rem
   button.tryBtn
     @extend %tryBtn
     display: block
     margin: 2rem auto 0
+    opacity: 0
+    transform: translateY(2rem)

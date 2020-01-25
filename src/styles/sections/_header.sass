@@ -3,6 +3,8 @@ header
     background-size: cover
     position: relative
     padding-bottom: 10rem
+    @media(max-width: 465px)
+        padding-bottom: 7rem
     .overlay
         position: absolute
         z-index: 1
@@ -39,6 +41,9 @@ header
             width: 80%
         @media(max-width: 767px)
             width: auto
+        @media(max-width: 465px)
+            margin-top: 3rem
+            text-align: left
         h1
             font-size: 3rem
             margin-bottom: 1rem
@@ -55,6 +60,9 @@ header
                 width: 80%
                 margin: auto
                 flex-direction: column
+            @media(max-width: 465px)
+                margin: 0
+                width: 100%
             input
                 padding: 1.5rem 1rem
                 width: 67%
@@ -64,11 +72,12 @@ header
             button
                 @extend %tryBtn
                 width: 33%
-                font-size: 1.25rem
                 @media(max-width: 767px)
-                    width: fit-content
+                    width: auto
                     margin: 1rem auto 0
-        // button
-        //     @extend %tryBtn
+                @media(max-width: 465px)
+                    margin-left: 0
+                    margin-right: 0
+                    display: inline-block
         p
             font-size: 1.5rem

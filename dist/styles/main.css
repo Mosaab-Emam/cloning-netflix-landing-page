@@ -5,13 +5,10 @@ header .hero form button, #faq button.tryBtn {
   border: none;
   color: inherit;
   padding: .75rem 1.5rem;
-  font-size: 2rem; }
-  @media (max-width: 991px) {
-    header .hero form button, #faq button.tryBtn {
-      font-size: 1.5rem; } }
+  font-size: 1.25rem; }
   @media (max-width: 767px) {
     header .hero form button, #faq button.tryBtn {
-      font-size: 1rem; } }
+      font-size: 1.5rem; } }
 
 * {
   box-sizing: border-box; }
@@ -129,6 +126,9 @@ header {
   background-size: cover;
   position: relative;
   padding-bottom: 10rem; }
+  @media (max-width: 465px) {
+    header {
+      padding-bottom: 7rem; } }
   header .overlay {
     position: absolute;
     z-index: 1;
@@ -168,6 +168,10 @@ header {
     @media (max-width: 767px) {
       header .hero {
         width: auto; } }
+    @media (max-width: 465px) {
+      header .hero {
+        margin-top: 3rem;
+        text-align: left; } }
     header .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem; }
@@ -186,6 +190,10 @@ header {
           width: 80%;
           margin: auto;
           flex-direction: column; } }
+      @media (max-width: 465px) {
+        header .hero form {
+          margin: 0;
+          width: 100%; } }
       header .hero form input {
         padding: 1.5rem 1rem;
         width: 67%; }
@@ -194,12 +202,16 @@ header {
             width: auto;
             padding: 1rem; } }
       header .hero form button {
-        width: 33%;
-        font-size: 1.25rem; }
+        width: 33%; }
         @media (max-width: 767px) {
           header .hero form button {
-            width: fit-content;
+            width: auto;
             margin: 1rem auto 0; } }
+        @media (max-width: 465px) {
+          header .hero form button {
+            margin-left: 0;
+            margin-right: 0;
+            display: inline-block; } }
     header .hero p {
       font-size: 1.5rem; }
 
@@ -250,6 +262,9 @@ header {
           font-size: 2rem; }
         #features .feature .info p {
           font-size: 1.2rem; } }
+      @media (max-width: 465px) {
+        #features .feature .info h2 {
+          font-size: 1.8rem; } }
       #features .feature .info button {
         background: transparent;
         color: inherit;
@@ -271,6 +286,9 @@ header {
       @media (max-width: 991px) {
         #features .feature #tv {
           margin-top: -3rem; } }
+      @media (max-width: 465px) {
+        #features .feature #tv {
+          margin-top: -1rem; } }
       #features .feature #tv img {
         position: relative;
         z-index: 2;
@@ -296,6 +314,9 @@ header {
       @media (max-width: 991px) {
         #features .feature #mobile {
           margin-top: 1rem; } }
+      @media (max-width: 465px) {
+        #features .feature #mobile {
+          margin-top: 2rem; } }
       #features .feature #mobile img {
         width: 75%; }
       #features .feature #mobile .download-box {
@@ -361,13 +382,16 @@ header {
       #faq h2 {
         font-size: 2.5rem;
         margin-bottom: 2rem; } }
+    @media (max-width: 465px) {
+      #faq h2 {
+        font-size: 1.8rem; } }
   #faq .accordion {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
     opacity: 0;
     transform: translateY(2rem); }
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       #faq .accordion {
         width: auto; } }
     #faq .accordion:first-of-type .accordion-btn {
@@ -390,8 +414,13 @@ header {
       outline: none;
       margin-top: 1rem;
       padding: 1.5rem; }
+      @media (max-width: 465px) {
+        #faq .accordion .accordion-btn {
+          text-align: left; } }
       #faq .accordion .accordion-btn i {
-        transform: scale(1.5); }
+        transform: scale(1.5);
+        display: flex;
+        align-items: center; }
     #faq .accordion .accordion-text {
       border-top: 1px solid black;
       max-height: 0;
@@ -441,6 +470,9 @@ footer {
           margin-bottom: 0; }
         footer .links-container ul li a {
           color: inherit; }
+          @media (min-width: 466px) {
+            footer .links-container ul li a br {
+              display: none; } }
   footer select {
     background: black;
     color: white;

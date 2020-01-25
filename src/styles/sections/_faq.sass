@@ -13,13 +13,15 @@
     @media(max-width: 767px)
       font-size: 2.5rem
       margin-bottom: 2rem
+    @media(max-width: 465px)
+      font-size: 1.8rem
   .accordion
     width: 75%
     margin-left: auto
     margin-right: auto
     opacity: 0
     transform: translateY(2rem)
-    @media(max-width: 767px)
+    @media(max-width: 991px)
       width: auto
     &:first-of-type .accordion-btn
       margin-top: 0
@@ -39,8 +41,12 @@
       outline: none
       margin-top: 1rem
       padding: 1.5rem
+      @media(max-width: 465px)
+        text-align: left
       i
         transform: scale(1.5)
+        display: flex
+        align-items: center
       
     .accordion-text
       border-top: 1px solid black

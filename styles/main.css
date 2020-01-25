@@ -21,7 +21,8 @@ html {
 
 body {
   position: relative;
-  color: white; }
+  color: white;
+  overflow: hidden; }
 
 h1, h2 {
   margin: 0; }
@@ -65,8 +66,7 @@ a {
   top: 0;
   bottom: 0;
   background: black;
-  z-index: 99;
-  transition: width .5s ease .5s; }
+  z-index: 99; }
 
 #loading-left {
   left: 0;
@@ -88,7 +88,6 @@ a {
   border: 3px solid transparent;
   border-top-color: #16a085;
   animation: spin 1.7s linear infinite;
-  transition: opacity .5s ease;
   z-index: 100; }
   #loading-spinner:before {
     content: "";
@@ -234,6 +233,9 @@ header {
       width: 50%;
       position: relative;
       z-index: 2; }
+      #features .feature .info > * {
+        opacity: 0;
+        transform: translateY(2rem); }
       #features .feature .info h2 {
         font-size: 3rem; }
       #features .feature .info p {
@@ -261,7 +263,8 @@ header {
       position: relative;
       text-align: right;
       position: relative;
-      z-index: 1; }
+      z-index: 1;
+      transform: scale(0); }
       @media (max-width: 991px) {
         #features .feature #tv {
           margin-top: -5rem; } }
@@ -285,7 +288,7 @@ header {
       align-items: flex-start;
       position: relative;
       z-index: 1;
-      transform: translateY(-2rem); }
+      transform: translateY(-2rem) scale(0); }
       @media (max-width: 991px) {
         #features .feature #mobile {
           align-items: center;
@@ -323,7 +326,8 @@ header {
           #features .feature #mobile .download-box p:last-of-type {
             color: #0071eb; }
     #features .feature #devices {
-      position: relative; }
+      position: relative;
+      transform: scale(0); }
       @media (max-width: 991px) {
         #features .feature #devices {
           margin-top: -1rem; } }
@@ -350,7 +354,9 @@ header {
   #faq h2 {
     font-size: 3rem;
     margin-bottom: 4rem;
-    text-align: center; }
+    text-align: center;
+    opacity: 0;
+    transform: translateY(2rem); }
     @media (max-width: 767px) {
       #faq h2 {
         font-size: 2.5rem;
@@ -358,7 +364,9 @@ header {
   #faq .accordion {
     width: 75%;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(2rem); }
     @media (max-width: 767px) {
       #faq .accordion {
         width: auto; } }
@@ -373,48 +381,41 @@ header {
         #faq .accordion .accordion-text {
           font-size: 1.2rem; } }
     #faq .accordion .accordion-btn {
+      display: flex;
+      justify-content: space-between;
       background: #303030;
       color: inherit;
       width: 100%;
-      text-align: left;
       border: none;
       outline: none;
       margin-top: 1rem;
-      padding: 1.5rem;
-      position: relative; }
-      #faq .accordion .accordion-btn:after {
-        content: "\e800";
-        font-family: "fontello";
-        font-size: 2rem;
-        position: absolute;
-        top: 50%;
-        right: 2rem;
-        transition: all .25s ease-in-out;
-        transform: translateY(-50%) rotate(0deg); }
-      #faq .accordion .accordion-btn.active:after {
-        transform: translateY(-50%) rotate(135deg); }
+      padding: 1.5rem; }
+      #faq .accordion .accordion-btn i {
+        transform: scale(1.5); }
     #faq .accordion .accordion-text {
       border-top: 1px solid black;
       max-height: 0;
       padding: 0;
-      overflow: hidden;
-      transition: max-height .5s ease-in-out; }
+      overflow: hidden; }
       #faq .accordion .accordion-text p {
         margin: 0;
         padding: 1.5rem; }
         #faq .accordion .accordion-text p + p {
           margin-top: 1rem;
           padding-top: 0; }
-      #faq .accordion .accordion-text.active {
-        max-height: 50rem; }
   #faq button.tryBtn {
     display: block;
-    margin: 2rem auto 0; }
+    margin: 2rem auto 0;
+    opacity: 0;
+    transform: translateY(2rem); }
 
 footer {
   background: black;
   color: #aaaaaa;
   padding: 4rem 0 2rem; }
+  footer .fadeInUp {
+    opacity: 0;
+    transform: translateY(2rem); }
   footer h3 {
     font-weight: 100; }
   footer .links-container {
